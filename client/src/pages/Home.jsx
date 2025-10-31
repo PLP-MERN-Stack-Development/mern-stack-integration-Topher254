@@ -1,0 +1,20 @@
+import React from 'react'
+import Navbar from '../components/Navbar'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import BlogList from '../components/BlogList'
+import NewsLetter from '../components/NewsLetter'
+
+const Home = () => {
+  return (
+    <div>
+        <Navbar/>
+        <Header/>
+        <BlogList/>
+        <NewsLetter/>
+        <Footer/>
+    </div>
+  )
+}
+
+export default Home
