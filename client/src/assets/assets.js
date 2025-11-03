@@ -133,3 +133,57 @@ export const blogComments = [
     __v: 0
   }
 ];
+
+
+export const dashboard_data = {
+  blogs: 24,
+  comments: 87,
+  drafts: 5,
+  recentBlogs: [
+    {
+      id: 1,
+      title: 'How AI is Transforming Digital Marketing',
+      category: 'Technology',
+      author: 'Raphael Sarota',
+      datePublished: '2025-10-25',
+      views: 342,
+      status: 'Published',
+    },
+    {
+      id: 2,
+      title: '10 Tips for Boosting Your SEO Strategy',
+      category: 'Marketing',
+      author: 'David Anyango',
+      datePublished: '2025-10-23',
+      views: 289,
+      status: 'Published',
+    },
+    {
+      id: 3,
+      title: 'The Future of Renewable Energy in Africa',
+      category: 'Energy',
+      author: 'Raphael Sarota',
+      datePublished: '2025-10-18',
+      views: 198,
+      status: 'Published',
+    },
+    {
+      id: 4,
+      title: 'Understanding Blockchain Beyond Cryptocurrency',
+      category: 'Blockchain',
+      author: 'David Anyango',
+      datePublished: '2025-10-10',
+      views: 156,
+      status: 'Draft',
+    },
+    {
+      id: 5,
+      title: 'Building Scalable Web Apps with MERN Stack',
+      category: 'Web Development',
+      author: 'Raphael Sarota',
+      datePublished: '2025-10-07',
+      views: 210,
+      status: 'Published',
+    },
+  ],
+}

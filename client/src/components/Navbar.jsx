@@ -6,7 +6,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='sticky top-0 z-50 bg-linear-to-r from-pink-50/95 via-purple-50/95 to-blue-50/95 backdrop-blur-md border-b border-white/20 shadow-sm'>
+    <div className='sticky top-0 z-50  backdrop-blur-md '>
       <div className='flex justify-between items-center py-4 px-6 sm:px-10 xl:px-32'>
         
         <div className='flex justify-center items-center'>

@@ -1,13 +1,10 @@
-import mongoose from "mongoose";
 import express from "express";
+import addBlog from "../controllers/blogController.js";
+import upload from "../middleware/multer.js";
+import auth from "../middleware/auth.js";
 
-const blogRouter=express();
+const blogRouter = express.Router();
 
-// GET-all blogs
-blogRouter.get('/',()=>{
-    try {
-        
-    } catch (error) {
-        
-    }
-})
+blogRouter.post('/add',upload.single('image'), auth, addBlog)
+
+export default blogRouter;
