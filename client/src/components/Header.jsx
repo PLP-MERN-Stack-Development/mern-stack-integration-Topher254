@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight, Search, SendHorizonal } from 'lucide-react';
+import { useAppContext } from '../context/AppContext';
 
 
 export default function Header() {
-
+const {setInput} = useAppContext();
+const inputRef = useRef();
+const onSubmitHandler=async()=>{
+  e.preventDefault();
+  setInput(inputRef.current.value);
+}
 
   return (
     <div className=" ">
@@ -19,7 +25,7 @@ export default function Header() {
             and interests.
           </p>
         </div>
-<form>
+<form onSubmit={onSubmitHandler}>
         <div className="max-w-xl mx-auto mb-2">
           <div className="relative">
             <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
@@ -27,6 +33,7 @@ export default function Header() {
             </div>
             <input
               type="text"
+              ref={inputRef}
               required
               placeholder="Search anything you are looking for ..."
               className="w-full pl-12 pr-12 py-2 rounded-full bg-white shadow-lg border border-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-300 text-gray-700 placeholder-gray-400"
@@ -35,6 +42,7 @@ export default function Header() {
               <SendHorizonal className="w-5 h-5 cursor-pointer text-gray-600" />
             </button>
           </div>
+          
         </div>
 </form>
       </div>

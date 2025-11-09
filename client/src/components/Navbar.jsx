@@ -1,9 +1,10 @@
 import React from 'react'
 import logo from '../assets/rida.png'
 import { useNavigate } from 'react-router' 
+import { useAppContext } from '../context/AppContext';
 
 const Navbar = () => {
-  const navigate = useNavigate();
+  const {navigate,token} =useAppContext()
 
   return (
     <div className='sticky top-0 z-50  backdrop-blur-md '>
@@ -44,7 +45,7 @@ const Navbar = () => {
           onClick={() => navigate('/admin')}
           className='bg-gray-900 cursor-pointer text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 hover:shadow-lg hover:scale-105 transition-all duration-300 shadow-md'
         >
-          Login
+          {token? "Dashboard":'Login'}
         </button>
       </div>
     </div>
